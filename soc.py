@@ -130,7 +130,7 @@ def main():
 
     sim_config = SimConfig()
     sim_config.add_clocker("sys_clk", freq_hz=args.sys_clk_freq)
-    sim_config.add_module("serial2tcp", ("serial", 0), args={"port": 4327})
+    sim_config.add_module("serial2console", "serial")
 
     builder.build(
         run=not args.no_compile_gateware,
